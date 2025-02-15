@@ -60,7 +60,7 @@ DigitalOut bipolar(PC_11);
 DigitalOut direction(PC_10);
 
 
-DigitalOut Bipolar2(PA_13);
+DigitalOut bipolar2(PA_13);
 DigitalOut direction2(PA_14);
 
 PwmOut motorL(PB_7);
@@ -73,25 +73,26 @@ SamplingPotentiometer pot1(A0, 3.3, 10);
 SamplingPotentiometer pot2(A1, 3.3, 10);
 float leftdialval = 0;
 float rightdialval = 0;
-direction = 0;
-bipolar = 0;
 
-direction2 = 0;
-Bipolar2 = 0;
+direction.write(0);
+bipolar.write(0);
 
-enable = 1;
+direction2.write(0);
+bipolar2.write(0);
+
+enable.write(1);
 
 
 while(1){
     lcd.locate(0, 0);
     leftdialval = ((pot1.getCurrentSampleNorm()) );
     lcd.printf("%f",leftdialval);
-    motorL.write(leftdialval);
+    motorL.write(1 - leftdialval);
 
     lcd.locate(60, 0);
     rightdialval = ((pot2.getCurrentSampleNorm()) );
     lcd.printf("%f",rightdialval);
-    motorR.write(rightdialval);
+    motorR.write(1 - rightdialval);
     wait(0.1);
     lcd.cls();
 }
