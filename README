@@ -1,1 +1,11 @@
 The Backup iteration files for TD1 Motor Control for Buggy Navigation
+
+Tasks:
+  1. Finish and Commit Code for Bipolar Control
+  2. Install and Read Encoder Values
+  3. Ensure buggy is following straight Line through the aid of encoders
+  4. Draw a 0.5m x 0.5m Square Path for Buggy to Follow 
+
+Developement Logging(Feel free to update to notify team of changes)
+14-17th feb: Created Independent Motor Control using Potentiometers (Directional)
+
