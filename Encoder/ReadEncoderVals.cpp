@@ -5,6 +5,11 @@
 
 
 
+
+
+
+
+
 class Potentiometer                                 //Begin Potentiometer class definition -- DO NOT MODIFY
 {
 private:                                            //Private data member declaration
@@ -69,7 +74,7 @@ DigitalOut enable(PC_3);
 //Encoder Code:
 #define PULSES_PER_REV 1024
 
-QEI leftEncoder(PA_6, PA_7, NC, PULSES_PER_REV, QEI::X2_ENCODING);
+QEI leftEncoder(PB_3, PA_10, NC, PULSES_PER_REV, QEI::X2_ENCODING);
 QEI rightEncoder(PB_5, PB_4, NC, PULSES_PER_REV, QEI::X2_ENCODING);
 
 int main(){
@@ -117,6 +122,7 @@ while(1){
 
     wait(0.1);
     lcd.cls();
+    
 }
 return 0;
 }
