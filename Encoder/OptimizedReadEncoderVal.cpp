@@ -8,9 +8,7 @@
 #define PULSES_PER_REV 1024
 #define DISPLAY_UPDATE_PERIOD 0.1f
 
-/**
- * @brief Class to handle analog input from a potentiometer
- */
+
 class Potentiometer {
 protected:
     AnalogIn inputSignal;
