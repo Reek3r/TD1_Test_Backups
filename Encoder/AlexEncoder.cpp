@@ -18,10 +18,10 @@ void displayEncoderData() {
     float rightRPM = (rightPulses / pulses_per_rev) * (60.0 / sampling_time);
     
     lcd.cls();
-    lcd.locate(0, 0);
+    lcd.locate(0, 20);
     lcd.printf("L RPM: %.2f  R RPM: %.2f", leftRPM, rightRPM);
     
-    lcd.locate(0, 10);
+    lcd.locate(60, 20);
     lcd.printf("L Pulses: %d  R Pulses: %d", leftPulses, rightPulses);
     
     leftWheel.reset(); 
